@@ -9,7 +9,7 @@ async function getUsers() {
     return response;
 }
 const Users = () => {
-    const [state, refetch] = useAsync(getUsers,[]);
+    const [state, refetch] = useAsync(getUsers,[]);  //[state,fetchUsers]
     const { loading, data:users, error} = state;  //state.data 를 users로 받기
     if (loading) return <div>로딩중...</div>
     if (error) return <div>에러가 발생했습니다.</div>
